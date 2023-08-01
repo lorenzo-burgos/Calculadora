@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #333, #444);
+}
+.calculator-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 250px;
+}
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    margin: 3px;
+}
+.number{
+    background-color: white;
+}
+
+.calculator-grid > .number:hover{
+    background-color: #a9a9a9;
+}
+.allClear{
+    grid-column: span 2;
+    color: black;
+    background-color: orangered;
+}
+.clear{
+    color: black;
+    background-color: orangered;
+}
+.equals{
+    grid-column: span 2;
+    color: black;
+    background-color: orangered;
+}
+.operation{
+    color: black;
+    background-color: orange;
+}
+.dot{
+    color: black;
+    background-color: orangered;
+}
+.signal{
+    color: black;
+    background-color: orange;
+    grid-column: span 4;
+}
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 6px;
+}
+.output .previous{
+    color: rgba(255,255, 255, 0.75);
+    font-size: 1.5rem;
+}
+.output .current{
+    color: white;
+    font-size: 2.5rem;
+}
